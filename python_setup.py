@@ -13,11 +13,13 @@ print(result)
 
 # a function that should accept a list of any length and prints out a series or strings that say "First I eat __", and "Next I eat __", and if list is empty prints "My lunchbox is empty!", the function should not return anything
 def eat_lunch(lunch_meal):
-    if not lunch_meal:
-        print("My lunchbox is empty :-( ")
+    if len(lunch_meal) == 0:
+        print("My lunch bob is empty! :-( ")
     else:
-        print("First I eat " + lunch_meal[0])
-        if lunch_meal:
-            print("Next I eat " + lunch_meal[2])
+        for i in range(len(lunch_meal)):
+            if i == 0:
+                print(f"First I eat {lunch_meal[0]}")
+            else:
+                print(f"Next I will eat {lunch_meal[i]}")
 eat_lunch([])
 eat_lunch(['Pizza', 'Tacos', 'PB&J'])  
