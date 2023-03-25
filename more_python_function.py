@@ -35,5 +35,7 @@ def pascal(number):
         triangle.append(new_row)
         return triangle
     
-print(pascal(5))
-print(pascal(1))
+number = 7
+triangle = pascal(number)
+for row in triangle:
+    print(row)
