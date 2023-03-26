@@ -2,13 +2,16 @@ def max_num(*numbers):
     return max(numbers)
 print(max_num(1,2,3,4))
 
-def mult_list(*numbers):
+def mult_list(numbers):
+    if len(numbers) == 0:
+        return 0
     result = 1
     for number in numbers:
         result *= number
-        print(result)
-numbers_list = [1, 2, 3]
-print(mult_list(numbers_list))
+    return(result)
+print(mult_list([1,2,3,4]))
+print(mult_list([0]))
+print(mult_list([123, 26]))
     
 
 def rev_string(string):
